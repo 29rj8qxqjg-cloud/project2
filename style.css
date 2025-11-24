@@ -16,6 +16,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 99;
 }
 
 nav a {
@@ -34,6 +35,10 @@ nav ul {
 
 nav ul a:hover {
     color: #1abc9c;
+}
+
+.media-menu {
+    display: none;
 }
 
 .brand {
@@ -227,6 +232,7 @@ nav ul a:hover {
     outline: none;
     transition: border-color 0.3s;
 }
+
 .submit-btn {
     background-color: #1abc9c;
     border: none;
@@ -317,4 +323,171 @@ footer {
     text-align: center;
     padding: 25px;
     font-size: 14px;
+}
+
+@media (max-width: 768px) {
+
+    /* nav */
+    nav {
+        padding: 16px 20px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav h1 a {
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    nav .media-menu {
+        display: block;
+        background-color: #1abc9c;
+        border: 2px solid #16a085;
+        border-radius: 10px;
+        padding: 10px 18px;
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    nav .media-menu:hover {
+        background-color: #159b80;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+
+    /* brand */
+    .brand {
+        padding: 120px 20px 80px;
+        line-height: normal;
+    }
+
+    .brand img {
+        width: 230px;
+        height: 230px;
+    }
+
+    .brand h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+        line-height: 42px;
+    }
+
+    .kecid .line {
+        width: 60px;
+    }
+
+    .kecid .star {
+        font-size: 30px;
+    }
+
+    .brand p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+
+
+    /* portfolio  */
+    .portfolio {
+        padding: 60px 20px;
+    }
+
+    .portfolio h2 {
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-grid {
+        display: block;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* about  */
+    .about {
+        padding: 60px 20px;
+    }
+
+    .about h2 {
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .about-text {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .download-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* contact  */
+    .contact {
+        padding: 60px 20px;
+    }
+
+    .contact h2 {
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px;
+    }
+
+    .submit-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+
+
+    /* footer  */
+    .footer-top {
+        flex-direction: column;
+        padding: 50px 20px;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+
+    .footer-column i {
+        margin-bottom: 10px;
+    }
 }
